@@ -1,17 +1,19 @@
 class Restaurant():
     
-    def __init__(self, restaurant_name, cuisine_type):
+    def __init__(self, restaurant_name, signature_dish_name):
         self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
+        self.signature_dish_name = signature_dish_name
         
     def describe_restaurant(self):
         print("Restaurant Name : " + self.restaurant_name)
-        print("Cuisine Type : " + self.cuisine_type)
+        print("Signature Dish : " + self.signature_dish_name)
 
     def open_restaurant(self):
-        print("Welcome the restaurant is open!!!")
+        print(self.restaurant_name + " is Now Open")
+        print("Welcome to " + self.restaurant_name)
+        print("We serve the best " + self.signature_dish_name)
 
-restaurant = Restaurant("Jollibee", "Fastfood")
+restaurant = Restaurant("Jollibee", "Fried Chicken")
 
 restaurant.describe_restaurant()
 print("\n")
