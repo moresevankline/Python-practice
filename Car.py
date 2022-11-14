@@ -37,7 +37,7 @@ class Battery():
         """Battery attributes"""
         self.battery_size = battery_size
 
-    def describe_battery(self)
+    def describe_battery(self):
         """Describe the battery size"""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
     
@@ -56,9 +56,8 @@ class ElectricCar(Car):
         print("This car runs by electric and doesn't need a gas tank")
 
     
-        
 my_tesla = ElectricCar('tesla', 'model s', 2006)
 print(my_tesla.get_descriptive_name())
-print(my_tesla.describe_battery())
+my_tesla.battery.describe_battery()
         
 
