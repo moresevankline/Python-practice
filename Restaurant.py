@@ -14,11 +14,12 @@ class Restaurant():
         print("Restaurant is open!\n")
 
 class User():
-    def __init__(self, first_name, middle_initial, last_name, age):
+    def __init__(self, first_name, middle_initial, last_name, age, login_attempts):
         self.first_name = first_name
         self.last_name = last_name
         self.middle_initial = middle_initial
         self.age = age
+        self.login_attempts = login_attempts
 
     def describe_user(self):
         print("First Name: " + self.first_name)
@@ -29,18 +30,21 @@ class User():
     def greet_user(self):
         print("\nHello " + self.first_name + " Welcome!!!")
 
-restaurant1 = Restaurant("Max", "Main Dish", 20)
-restaurant1.describe_restaurant()
-restaurant1.open_restaurant()
+    def increment_login_attempts(self):
+        self.login_attempts += 1
 
-restaurant2 = Restaurant("McDonalds", "Fast Food", 19)
-restaurant2.describe_restaurant()
-restaurant2.open_restaurant()
+    def reset_login_attempts(self):
+        self.login_attempts = 0
 
-restaurant3 = Restaurant("Jollibee", "Fast Food", 0)
-restaurant3.describe_restaurant()
-restaurant3.open_restaurant()
+class IceCreamStand(Restaurant):
+    def __init__(self, flavors):
+        self.flavors = flavors
 
-user1 = User("Sherlock", "J.", "Holmes", 29)
-user1.describe_user()
-user1.greet_user()
+    def display_flavors(self):
+
+ice_cream_stand = IceCreamStand("Vanilla")
+ice_cream_stand = IceCreamStand("Strawberry")
+ice_cream_stand = IceCreamStand("Chocolate")
+
+
+
